@@ -1,4 +1,39 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+div.palpite {
+    display: flex;
+    margin: 6px;
+    width: 50vw;
+    justify-content: center;
+}
+
+div.letra {
+    display: flex;
+    border: 2px solid gray;
+    margin: 0 3px;
+    border-radius: 10%;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+div.green {
+    background-color: green;
+    border-color: green;
+}
+
+div.yellow {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+div.gray {
+    background-color: grey;
+    border-color: grey;
+}
+

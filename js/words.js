@@ -1,4 +1,4 @@
-const word = ['Aarao', 
+exports.WORD = ['Aarao', 
     'abaco', 
     'abade', 
     'abafa', 
