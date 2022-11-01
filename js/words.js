@@ -1,4 +1,4 @@
-exports.WORD = ['Aarao', 
+const WORD = ['Aarao', 
     'abaco', 
     'abade', 
     'abafa', 
@@ -5482,3 +5482,6 @@ exports.WORD = ['Aarao',
 
 const wordSecretas = [];
 
+// if (typeof module !== 'undefined') {
+//     module.exports = WORD;
+// }

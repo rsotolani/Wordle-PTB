@@ -1,9 +1,3 @@
-//obtendo a lista de palavras
-//import { WORD } from "./words.js";
-const WORD = require('./words.js');
-
-//console.log(WORD);
-
 //Classe do jogo
 
 class Wordle {
@@ -11,15 +5,23 @@ class Wordle {
     constructor() {
         this.rodadas = 6;
         this.rodadaAtual = 1;
-        this.palavraSecreta = "arted";
-        this.palpites = {
-            palpite1: ["dassl",],
-            palpite2: [],
-            palpite3: [],
-            palpite4: [],
-            palpite5: [],
-            palpite6: []
-        }
+        this.palavraSecreta = "";
+        this.palpites =[
+            [1, "aaaaa"],
+            [2, "bc"],
+            [3, "def"],
+            [4, "ghij"],
+            [5, "klmno"],
+            [6, ""]
+        ]
+        // this.palpites = {
+        //     palpite1: [],
+        //     palpite2: [],
+        //     palpite3: [],
+        //     palpite4: [],
+        //     palpite5: [],
+        //     palpite6: []
+        // }
         this.ganhou = false;
     }
 
@@ -28,8 +30,18 @@ class Wordle {
         return this.palavraSecreta = WORD[Math.floor(Math.random() * WORD.length)];
     }
 
+    //método para indicar onde inserir a letra digitada
+    position() {
+       //console.log(this.palpites);
+        for (let key of this.palpites) {
+            console.log(key, key[1].length);
+            if (key[1].length === 5) continue;
+            return key;
+        }
+    }
+
     //método para renderizar o board
-    renderTentativas() {
+    renderPalpites() {
 
     }
 
@@ -52,3 +64,12 @@ class Teclado {
 
     }
 }
+
+// if (typeof module !== 'undefined') {
+//     module.exports = {
+//         sortearPalavraSecreta,
+//         renderPalpites,
+//         checarTentativa,
+//         apagarLetra
+//     }
+// }

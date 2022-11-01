@@ -37,3 +37,18 @@ div.gray {
     border-color: grey;
 }
 
+.linha {
+    display: flex;
+    margin: 6px;
+    width: 50vw;
+    justify-content: center;
+}
+
+.tecla {
+    border: 2px solid gray;
+    margin: 3px 1px;
+    border-radius: 10%;
+    width: 30px;
+    height: 50px;
+}
+

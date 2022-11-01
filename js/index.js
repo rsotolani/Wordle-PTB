@@ -3,7 +3,33 @@
 //instanciar a minha classe
 const wordle = new Wordle();
 
-console.log(wordle);
+//capturar todos os itens necessários
+const boasVindas = document.getElementById('boasvindas');
+const jogador = document.getElementById('inputName');
+const btnJogar = document.getElementById('btnJogar');
+const board = document.getElementById('board');
+const secreta = document.getElementById('boasvindas');
+const palpites = document.getElementById('palpites');
+
+
+
+  
+
+
+//console.log(wordle);
+
+//colocando event listener no botão jogar
+
+//colocando os event listeners no teclado 
+const letras = document.querySelectorAll('.tecla');
+letras.forEach( (letra) => {
+    letra.onclick = () => {
+        console.log(letra.innerText);
+        wordle.position();
+    }
+});
+
+console.log(letras);
 
 //capturar todos os itens necessários
 

@@ -47,10 +47,10 @@
     <section id="board" class="board">
 
         <!-- Caixa com a palavra secreta oculta -->
-        <div class="secreta">palavra-secreta</div>
+        <div id="secreta" class="secreta">palavra-secreta</div>
 
         <!-- área para as caixas das 6 tentativas -->
-        <div class="palpites">
+        <div id="palpites" class="palpites">
             <div id="p1" class="palpite">
                 <div id="p1l1" class="letra">a</div>
                 <div id="p1l2" class="letra">b</div>
@@ -99,18 +99,50 @@
 
     <!-- área para colocar o teclado -->
     <section id="teclado" class="teclado">
-        teclado
+        <div class="linha">
+            <button class="tecla">q</button>
+            <button class="tecla">w</button>
+            <button class="tecla">e</button>
+            <button class="tecla">r</button>
+            <button class="tecla">t</button>
+            <button class="tecla">y</button>
+            <button class="tecla">u</button>
+            <button class="tecla">i</button>
+            <button class="tecla">o</button>
+            <button class="tecla">p</button>
+        </div>
+        <div class="linha">
+            <button class="tecla">a</button>
+            <button class="tecla">s</button>
+            <button class="tecla">d</button>
+            <button class="tecla">f</button>
+            <button class="tecla">g</button>
+            <button class="tecla">h</button>
+            <button class="tecla">j</button>
+            <button class="tecla">k</button>
+            <button class="tecla">l</button>
+        </div>
+        <div class="linha">
+            <button class="tecla">Enter</button>
+            <button class="tecla">x</button>
+            <button class="tecla">c</button>
+            <button class="tecla">v</button>
+            <button class="tecla">b</button>
+            <button class="tecla">z</button>
+            <button class="tecla">n</button>
+            <button class="tecla">m</button>
+            <button class="tecla">Delete</button>
+        </div>
     </section>
 
     <!-- Tela do resultado do jogo -->
     <section id="resultado" class="resultado">
         resultado
     </section>
-
-
-    <script src="./js/index.js"></script>
+    
     <script src="./js/words.js"></script>
-    <script src="./js/wordle-ptb.js" type="module"></script>
+    <script src="./js/wordle-ptb.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 </html>
