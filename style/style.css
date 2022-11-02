@@ -6,18 +6,45 @@
 
 body {
     width: 70vw;
-    border: 2px solid red;
     margin: auto;
 }
 
 #header {
-    border: 2px solid yellow;
     text-align: center;
+    margin-top: 20px;
 }
 
 #boasvindas {
-    border: 2px solid green;
+    padding: 5% 10%;
     margin: auto;
+}
+
+.como-jogar {
+    padding: 8px 0;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.dicas, .exemplo, .palavra-exemplo  {
+    list-style: inside;
+    margin-left: 20px;
+}
+
+.jogador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+
+}
+
+#btnJogar {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1;
+    width: 50%;
+    background-color: white;
+    color: rgb(53, 53, 53);
 }
 
 #secreta {
@@ -29,13 +56,11 @@ body {
 }
 
 #board {
-    border: 2px solid blue;
-    margin: auto;
+    margin: 20px auto;
 }
 
 
 #palpites {
-    border: 2px solid lightcoral;
     display: flex;
     justify-items: center;
     flex-wrap: wrap;
@@ -47,7 +72,6 @@ body {
     margin: 2px;
     width: 50vw;
     justify-content: center;
-    border: 2px solid orange;
 
 }
 
@@ -78,7 +102,6 @@ div.gray {
 }
 
 #teclado {
-    border: 2px solid mediumorchid;
     margin: auto;
     display: flex;
     justify-items: center;
@@ -91,7 +114,6 @@ div.gray {
     margin: 2px;
     width: 50vw;
     justify-content: center;
-    border: 2px solid purple;
 
 }
 
@@ -104,13 +126,17 @@ div.gray {
 }
 
 .tecla-grande {
-    width: 60px;
+    border: 2px solid gray;
+    margin: 3px 1px;
+    border-radius: 10%;
+    width: 80px;
     height: 50px;
 }
 
 #resultado {
-    border: 2px solid blueviolet;
+    height: 100px;
     margin: auto;
+    text-align: center;
 }
 
 

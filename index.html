@@ -16,13 +16,13 @@
     <section id="boasvindas" class="boasvindas">
         <!-- tela inicial do jogo -->
         <p class="como-jogar">Como Jogar</p>
-        <p class="adivinhar">Adivinhe o Wordle em 6 tentativas.</p>
-        <ul>
+        <ul class="dicas">
+            <li>Adivinhe a palavra secreta em até 6 tentativas.</li>
             <li>Cada palpite deve ser uma palavra válida de 5 letras.</li>
-            <li>As palavras são em Português e sem acento.</li>
-            <li>A cor dos azulejos mudará para mostrar o quão perto seu palpite está da palavra.</li>
+            <li>As palavras são em português e sem acento.</li>
+            <li>A cor dos azulejos mudará para mostrar o quão perto seu palpite está da palavra secreta.</li>
         </ul>
-        <p class="exemplo">Exemplos</p>
+        <p class="como-jogar">Exemplos</p>
         <p class="palavra-exemplo">CANSA</p>
         <p class="exemplo">C está na palavra e no lugar correto.</p>
         <p class="palavra-exemplo">PONTA</p>
@@ -57,46 +57,46 @@
         <!-- área para as caixas das 6 tentativas -->
         <div id="palpites" class="palpites">
             <div id="p1" class="palpite">
-                <div id="p1l1" class="letra"></div>
-                <div id="p1l2" class="letra"></div>
-                <div id="p1l3" class="letra"></div>
-                <div id="p1l4" class="letra"></div>
-                <div id="p1l5" class="letra"></div>
+                <div id="11" class="letra"></div>
+                <div id="12" class="letra"></div>
+                <div id="13" class="letra"></div>
+                <div id="14" class="letra"></div>
+                <div id="15" class="letra"></div>
             </div>
             <div id="p2" class="palpite">
-                <div id="p2l1" class="letra"></div>
-                <div id="p2l2" class="letra"></div>
-                <div id="p2l3" class="letra"></div>
-                <div id="p2l4" class="letra"></div>
-                <div id="p2l5" class="letra"></div>
+                <div id="21" class="letra"></div>
+                <div id="22" class="letra"></div>
+                <div id="23" class="letra"></div>
+                <div id="24" class="letra"></div>
+                <div id="25" class="letra"></div>
             </div>
             <div id="p3" class="palpite">
-                <div id="p3l1" class="letra"></div>
-                <div id="p3l2" class="letra"></div>
-                <div id="p3l3" class="letra"></div>
-                <div id="p3l4" class="letra"></div>
-                <div id="p3l5" class="letra"></div>
+                <div id="31" class="letra"></div>
+                <div id="32" class="letra"></div>
+                <div id="33" class="letra"></div>
+                <div id="34" class="letra"></div>
+                <div id="35" class="letra"></div>
             </div>
             <div id="p4" class="palpite">
-                <div id="p4l1" class="letra"></div>
-                <div id="p4l2" class="letra"></div>
-                <div id="p4l3" class="letra"></div>
-                <div id="p4l4" class="letra"></div>
-                <div id="p4l5" class="letra"></div>
+                <div id="41" class="letra"></div>
+                <div id="42" class="letra"></div>
+                <div id="43" class="letra"></div>
+                <div id="44" class="letra"></div>
+                <div id="45" class="letra"></div>
             </div>
             <div id="p5" class="palpite">
-                <div id="p5l1" class="letra"></div>
-                <div id="p5l2" class="letra"></div>
-                <div id="p5l3" class="letra"></div>
-                <div id="p5l4" class="letra"></div>
-                <div id="p5l5" class="letra"></div>
+                <div id="51" class="letra"></div>
+                <div id="52" class="letra"></div>
+                <div id="53" class="letra"></div>
+                <div id="54" class="letra"></div>
+                <div id="55" class="letra"></div>
             </div>
             <div id="p6" class="palpite">
-                <div id="p6l1" class="letra"></div>
-                <div id="p6l2" class="letra"></div>
-                <div id="p6l3" class="letra"></div>
-                <div id="p6l4" class="letra"></div>
-                <div id="p6l5" class="letra"></div>
+                <div id="61" class="letra"></div>
+                <div id="62" class="letra"></div>
+                <div id="63" class="letra"></div>
+                <div id="64" class="letra"></div>
+                <div id="65" class="letra"></div>
             </div>
         </div>
 
@@ -128,7 +128,7 @@
             <button class="tecla">l</button>
         </div>
         <div class="linha">
-            <button class="tecla tecla-grande">Advinhar</button>
+            <button id="adivinhar" class="tecla-grande">Adivinhar</button>
             <button class="tecla">x</button>
             <button class="tecla">c</button>
             <button class="tecla">v</button>
@@ -136,7 +136,7 @@
             <button class="tecla">z</button>
             <button class="tecla">n</button>
             <button class="tecla">m</button>
-            <button class="tecla tecla-grande">Apagar</button>
+            <button id="apagar" class="tecla-grande">Apagar</button>
         </div>
     </section>
 
