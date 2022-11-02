@@ -3,6 +3,7 @@
 class Wordle {
 
     constructor() {
+        this.jogador = "";
         this.rodadas = 6;
         this.rodadaAtual = 1;
         this.palavraSecreta = "";
@@ -31,13 +32,16 @@ class Wordle {
     }
 
     //método para indicar onde inserir a letra digitada
-    position() {
+    addLetra(letra) {
        //console.log(this.palpites);
         for (let key of this.palpites) {
-            console.log(key, key[1].length);
-            if (key[1].length === 5) continue;
-            return key;
+            //console.log(key, key[1].length);
+            if (key[1].length < 5) {
+                key[1] += letra;
+                return true;
+            } 
         }
+        return false;
     }
 
     //método para renderizar o board

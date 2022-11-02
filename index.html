@@ -31,12 +31,13 @@
         <p class="exemplo">Nenhuma letra está na palavra em nenhum lugar.</p>
 
         <div class="jogador">
+            <!-- 
             <label>Qual é o seu nome?</label>
-            <input
-            type="text"
+            <input type="text"
             placeholder="Digite aqui o seu nome"
             id="inputName"
             />
+            -->
             <button id="btnJogar">Jogar!</button>
         </div>
 
@@ -44,61 +45,65 @@
 
 
     <!-- Tela do jogo -->
-    <section id="board" class="board">
+    <section id="board" class="board hidden">
 
         <!-- Caixa com a palavra secreta oculta -->
-        <div id="secreta" class="secreta">palavra-secreta</div>
+        <div class="secreta"> <span id="secreta" class="hidden">palavra-secreta</span></div>
 
+        <!-- Caixa com o nome do jogador 
+        <div id="nome-jogador" class="nome-jogador">jogador</div>
+        -->
+        
         <!-- área para as caixas das 6 tentativas -->
         <div id="palpites" class="palpites">
             <div id="p1" class="palpite">
-                <div id="p1l1" class="letra">a</div>
-                <div id="p1l2" class="letra">b</div>
-                <div id="p1l3" class="letra">c</div>
-                <div id="p1l4" class="letra">d</div>
-                <div id="p1l5" class="letra">e</div>
+                <div id="p1l1" class="letra"></div>
+                <div id="p1l2" class="letra"></div>
+                <div id="p1l3" class="letra"></div>
+                <div id="p1l4" class="letra"></div>
+                <div id="p1l5" class="letra"></div>
             </div>
             <div id="p2" class="palpite">
-                <div id="p2l1" class="letra">f</div>
-                <div id="p2l2" class="letra">g</div>
-                <div id="p2l3" class="letra">h</div>
-                <div id="p2l4" class="letra">i</div>
-                <div id="p2l5" class="letra">j</div>
+                <div id="p2l1" class="letra"></div>
+                <div id="p2l2" class="letra"></div>
+                <div id="p2l3" class="letra"></div>
+                <div id="p2l4" class="letra"></div>
+                <div id="p2l5" class="letra"></div>
             </div>
             <div id="p3" class="palpite">
-                <div id="p3l1" class="letra">k</div>
-                <div id="p3l2" class="letra">l</div>
-                <div id="p3l3" class="letra">m</div>
-                <div id="p3l4" class="letra">n</div>
-                <div id="p3l5" class="letra">o</div>
+                <div id="p3l1" class="letra"></div>
+                <div id="p3l2" class="letra"></div>
+                <div id="p3l3" class="letra"></div>
+                <div id="p3l4" class="letra"></div>
+                <div id="p3l5" class="letra"></div>
             </div>
             <div id="p4" class="palpite">
-                <div id="p4l1" class="letra">p</div>
-                <div id="p4l2" class="letra">q</div>
-                <div id="p4l3" class="letra">r</div>
-                <div id="p4l4" class="letra">s</div>
-                <div id="p4l5" class="letra">t</div>
+                <div id="p4l1" class="letra"></div>
+                <div id="p4l2" class="letra"></div>
+                <div id="p4l3" class="letra"></div>
+                <div id="p4l4" class="letra"></div>
+                <div id="p4l5" class="letra"></div>
             </div>
             <div id="p5" class="palpite">
-                <div id="p5l1" class="letra">u</div>
-                <div id="p5l2" class="letra">v</div>
-                <div id="p5l3" class="letra">x</div>
-                <div id="p5l4" class="letra">w</div>
-                <div id="p5l5" class="letra">y</div>
+                <div id="p5l1" class="letra"></div>
+                <div id="p5l2" class="letra"></div>
+                <div id="p5l3" class="letra"></div>
+                <div id="p5l4" class="letra"></div>
+                <div id="p5l5" class="letra"></div>
             </div>
             <div id="p6" class="palpite">
-                <div id="p6l1" class="letra">z</div>
-                <div id="p6l2" class="letra">1</div>
-                <div id="p6l3" class="letra">2</div>
-                <div id="p6l4" class="letra">3</div>
-                <div id="p6l5" class="letra">4</div>
+                <div id="p6l1" class="letra"></div>
+                <div id="p6l2" class="letra"></div>
+                <div id="p6l3" class="letra"></div>
+                <div id="p6l4" class="letra"></div>
+                <div id="p6l5" class="letra"></div>
             </div>
         </div>
 
     </section>
 
     <!-- área para colocar o teclado -->
-    <section id="teclado" class="teclado">
+    <section id="teclado" class="teclado hidden">
         <div class="linha">
             <button class="tecla">q</button>
             <button class="tecla">w</button>
@@ -123,7 +128,7 @@
             <button class="tecla">l</button>
         </div>
         <div class="linha">
-            <button class="tecla">Enter</button>
+            <button class="tecla tecla-grande">Advinhar</button>
             <button class="tecla">x</button>
             <button class="tecla">c</button>
             <button class="tecla">v</button>
@@ -131,12 +136,12 @@
             <button class="tecla">z</button>
             <button class="tecla">n</button>
             <button class="tecla">m</button>
-            <button class="tecla">Delete</button>
+            <button class="tecla tecla-grande">Apagar</button>
         </div>
     </section>
 
     <!-- Tela do resultado do jogo -->
-    <section id="resultado" class="resultado">
+    <section id="resultado" class="resultado hidden">
         resultado
     </section>
     

@@ -8,15 +8,35 @@ const boasVindas = document.getElementById('boasvindas');
 const jogador = document.getElementById('inputName');
 const btnJogar = document.getElementById('btnJogar');
 const board = document.getElementById('board');
-const secreta = document.getElementById('boasvindas');
+const secreta = document.getElementById('secreta');
 const palpites = document.getElementById('palpites');
+const nomeJogador = document.getElementById('nome-jogador');
 
 
+//sorteando a palavra secreta
+secreta.innerText = wordle.sortearPalavraSecreta();
 
+//adicionar o event listener no btnStart
+btnJogar.addEventListener("click", () => {
+    //ocultando a tela de boasVindas
+    boasVindas.classList.add("hidden");
+    
+    //mostrando o board e o teclado
+    board.classList.remove("hidden");
+    teclado.classList.remove("hidden");
   
+    //colocando o nome do jogador na classe wordle
+    wordle.jogador = jogador.value; 
+    //colocando o nome do jogador no html
+    nomeJogador.innerText = wordle.jogador; 
+  
+  });
+
+//Controlando o jogo em 6 palpites
 
 
-//console.log(wordle);
+
+
 
 //colocando event listener no botão jogar
 
@@ -24,8 +44,8 @@ const palpites = document.getElementById('palpites');
 const letras = document.querySelectorAll('.tecla');
 letras.forEach( (letra) => {
     letra.onclick = () => {
-        console.log(letra.innerText);
-        wordle.position();
+        //console.log(letra.innerText);
+        console.log(wordle.addLetra(letra.innerText));
     }
 });
 
