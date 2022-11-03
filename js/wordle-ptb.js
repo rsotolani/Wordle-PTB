@@ -60,6 +60,23 @@ class Wordle {
         
     }
 
+    initBoard(palpites) {
+
+        for (let i = 1; i <= 6; i++) {
+            let row = document.createElement("div")
+            row.className = "palpite";
+            row.id = `p${i}`;
+        
+        for (let j = 1; j <= 5; j++) {
+            let box = document.createElement("div")
+            box.className = "letra";
+            row.appendChild(box);
+            box.id = `${i}${j}`;
+        }
+        palpites.appendChild(row)
+        }
+    }
+
 }
 
 

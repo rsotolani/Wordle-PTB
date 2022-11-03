@@ -56,58 +56,19 @@
     <!-- Tela do jogo -->
     <section id="board" class="board hidden">
 
-        <button id="btnReset">Jogar novamente</button>
-        <!-- Caixa com a palavra secreta oculta -->
-        <div class="secreta"> <span id="secreta" class="">palavra-secreta</span></div>
-
-        <!-- Caixa com o nome do jogador 
-        <div id="nome-jogador" class="nome-jogador">jogador</div>
-        -->
+        <!-- Tela do resultado do jogo -->
+    <section id="resultado" class="resultado">
+        <div id="aviso" class="hidden">
+            aviso
+        </div>
+        <div id="secreta" class="hidden">
+            palavra-secreta
+        </div>
+    </section>
         
         <!-- área para as caixas das 6 tentativas -->
         <div id="palpites" class="palpites">
-            <div id="p1" class="palpite">
-                <div id="11" class="letra"></div>
-                <div id="12" class="letra"></div>
-                <div id="13" class="letra"></div>
-                <div id="14" class="letra"></div>
-                <div id="15" class="letra"></div>
-            </div>
-            <div id="p2" class="palpite">
-                <div id="21" class="letra"></div>
-                <div id="22" class="letra"></div>
-                <div id="23" class="letra"></div>
-                <div id="24" class="letra"></div>
-                <div id="25" class="letra"></div>
-            </div>
-            <div id="p3" class="palpite">
-                <div id="31" class="letra"></div>
-                <div id="32" class="letra"></div>
-                <div id="33" class="letra"></div>
-                <div id="34" class="letra"></div>
-                <div id="35" class="letra"></div>
-            </div>
-            <div id="p4" class="palpite">
-                <div id="41" class="letra"></div>
-                <div id="42" class="letra"></div>
-                <div id="43" class="letra"></div>
-                <div id="44" class="letra"></div>
-                <div id="45" class="letra"></div>
-            </div>
-            <div id="p5" class="palpite">
-                <div id="51" class="letra"></div>
-                <div id="52" class="letra"></div>
-                <div id="53" class="letra"></div>
-                <div id="54" class="letra"></div>
-                <div id="55" class="letra"></div>
-            </div>
-            <div id="p6" class="palpite">
-                <div id="61" class="letra"></div>
-                <div id="62" class="letra"></div>
-                <div id="63" class="letra"></div>
-                <div id="64" class="letra"></div>
-                <div id="65" class="letra"></div>
-            </div>
+            <!-- será preenchido -->
         </div>
 
     </section>
@@ -148,12 +109,12 @@
             <button id="M" class="tecla">M</button>
             <button id="apagar" class="tecla-grande">Apagar</button>
         </div>
+
+        <button id="btnReset" class="hidden">Jogar novamente</button>
     </section>
 
-    <!-- Tela do resultado do jogo -->
-    <section id="resultado" class="resultado hidden">
-        resultado
-    </section>
+  
+    
     
     <script src="./js/words.js"></script>
     <script src="./js/wordle-ptb.js"></script>

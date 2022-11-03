@@ -8,6 +8,7 @@ const boasVindas = document.getElementById('boasvindas');
 const btnJogar = document.getElementById('btnJogar');
 const board = document.getElementById('board');
 const secreta = document.getElementById('secreta');
+const aviso = document.getElementById('aviso');
 const palpites = document.getElementById('palpites');
 const nomeJogador = document.getElementById('nome-jogador');
 const divResultado = document.getElementById('resultado');
@@ -18,7 +19,6 @@ let apertouAdivinhar = false;
 
 //sorteando a palavra secreta
 secreta.innerText = wordle.sortearPalavraSecreta();
-//secreta.innerText = "ALUDA";
 
 //adicionar o event listener no btnStart
 btnJogar.addEventListener("click", () => {
@@ -26,6 +26,7 @@ btnJogar.addEventListener("click", () => {
     boasVindas.classList.add("hidden");
     
     //mostrando o board e o teclado
+    wordle.initBoard(palpites);
     board.classList.remove("hidden");
     teclado.classList.remove("hidden");
   });
@@ -49,8 +50,8 @@ btnAdivinhar.onclick = () => {
 
         //se palavra nao existe no dicionario
         if (!wordle.palavraValida(palavra)){
-            divResultado.innerText = "Esta palavra não existe!";
-            divResultado.classList.remove("hidden");
+            aviso.innerText = "Esta palavra não existe!";
+            aviso.classList.remove("hidden");
             apertouAdivinhar = false;
             return;
         } 
@@ -72,11 +73,11 @@ btnAdivinhar.onclick = () => {
             //se ganhou
             if (palavra === wordle.palavraSecreta) {
                 wordle.ganhou = true;
-                divResultado.innerText = "Você ganhou!";
-                divResultado.classList.remove("hidden");
+                aviso.innerText = "Você ganhou!";
+                aviso.classList.remove("hidden");
 
                 //mostrar botao para jogar de novo
-
+                btnReset.classList.remove("hidden");
                 return;
             } 
             //se ainda não ganhou
@@ -90,11 +91,11 @@ btnAdivinhar.onclick = () => {
             //se não tem mais rodadas disponíveis
             else {
                 //
-                divResultado.innerText = "Você perdeu!";
-                divResultado.classList.remove("hidden");
+                aviso.innerText = "Você perdeu!";
+                aviso.classList.remove("hidden");
                 secreta.classList.remove("hidden");
-
                 //mostrar botao para jogar de novo
+                btnReset.classList.remove("hidden");
 
 
             }
@@ -114,7 +115,7 @@ btnApagar.onclick = () => {
         (wordle.letters.length > 0) &&
         (!apertouAdivinhar)) {
             
-        divResultado.innerText = "";
+        aviso.innerText = "";
         divPosicao = document.getElementById(wordle.getPosicao(wordle.letters.length));
 
         //apagando a ultima letra
@@ -163,5 +164,11 @@ btnReset.addEventListener("click", () => {
     wordle.reset();
     //resetar o dom
     secreta.innerText = wordle.sortearPalavraSecreta();
+    //palpites.removeChilds;
+    palpites.innerHTML = "";
+    wordle.initBoard(palpites);
+    btnReset.classList.add("hidden");
+    aviso.classList.add("hidden");
+    secreta.classList.add("hidden");
 
 })
