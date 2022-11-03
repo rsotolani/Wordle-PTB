@@ -12,6 +12,15 @@ class Wordle {
         this.ganhou = false;
     }
 
+    reset() {
+        this.rodadas = 60;
+        this.rodadaAtual = 10;
+        this.palavraSecreta = "";
+        this.letters = [];     
+        this.posicao = 10;
+        this.ganhou = false;
+    }
+
     //método para sortear a palavra secreta
     sortearPalavraSecreta() {
         return this.palavraSecreta = WORD[Math.floor(Math.random() * WORD.length)].toUpperCase();

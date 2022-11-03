@@ -158,3 +158,10 @@ letras.forEach( (letra) => {
     }
 });
 
+const btnReset = document.getElementById("btnReset");
+btnReset.addEventListener("click", () => {
+    wordle.reset();
+    //resetar o dom
+    secreta.innerText = wordle.sortearPalavraSecreta();
+
+})
