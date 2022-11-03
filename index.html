@@ -23,23 +23,32 @@
             <li>A cor dos azulejos mudará para mostrar o quão perto seu palpite está da palavra secreta.</li>
         </ul>
         <p class="como-jogar">Exemplos</p>
-        <p class="palavra-exemplo">CANSA</p>
+        <div class="palpite">
+            <div class="letra green">C</div>
+            <div class="letra gray">A</div>
+            <div class="letra gray">U</div>
+            <div class="letra gray">S</div>
+            <div class="letra gray">A</div>
+        </div>
         <p class="exemplo">C está na palavra e no lugar correto.</p>
-        <p class="palavra-exemplo">PONTA</p>
+        <div class="palpite">
+            <div class="letra gray">P</div>
+            <div class="letra gray">O</div>
+            <div class="letra yellow">N</div>
+            <div class="letra gray">T</div>
+            <div class="letra gray">A</div>
+        </div>
         <p class="exemplo">N está na palavra, mas no lugar errado.</p>
-        <p class="palavra-exemplo">VAGAO</p>
+        <div class="palpite">
+            <div class="letra gray">A</div>
+            <div class="letra gray">N</div>
+            <div class="letra gray">O</div>
+            <div class="letra gray">E</div>
+            <div class="letra gray">S</div>
+        </div>
         <p class="exemplo">Nenhuma letra está na palavra em nenhum lugar.</p>
 
-        <div class="jogador">
-            <!-- 
-            <label>Qual é o seu nome?</label>
-            <input type="text"
-            placeholder="Digite aqui o seu nome"
-            id="inputName"
-            />
-            -->
-            <button id="btnJogar">Jogar!</button>
-        </div>
+        <button id="btnJogar">Jogar!</button>
 
     </section>
 
@@ -105,37 +114,37 @@
     <!-- área para colocar o teclado -->
     <section id="teclado" class="teclado hidden">
         <div class="linha">
-            <button class="tecla">q</button>
-            <button class="tecla">w</button>
-            <button class="tecla">e</button>
-            <button class="tecla">r</button>
-            <button class="tecla">t</button>
-            <button class="tecla">y</button>
-            <button class="tecla">u</button>
-            <button class="tecla">i</button>
-            <button class="tecla">o</button>
-            <button class="tecla">p</button>
+            <button id="q" class="tecla">q</button>
+            <button id="w" class="tecla">w</button>
+            <button id="e" class="tecla">e</button>
+            <button id="r" class="tecla">r</button>
+            <button id="t" class="tecla">t</button>
+            <button id="y" class="tecla">y</button>
+            <button id="u" class="tecla">u</button>
+            <button id="i" class="tecla">i</button>
+            <button id="o" class="tecla">o</button>
+            <button id="p" class="tecla">p</button>
         </div>
         <div class="linha">
-            <button class="tecla">a</button>
-            <button class="tecla">s</button>
-            <button class="tecla">d</button>
-            <button class="tecla">f</button>
-            <button class="tecla">g</button>
-            <button class="tecla">h</button>
-            <button class="tecla">j</button>
-            <button class="tecla">k</button>
-            <button class="tecla">l</button>
+            <button id="a" class="tecla">a</button>
+            <button id="s" class="tecla">s</button>
+            <button id="d" class="tecla">d</button>
+            <button id="f" class="tecla">f</button>
+            <button id="g" class="tecla">g</button>
+            <button id="h" class="tecla">h</button>
+            <button id="j" class="tecla">j</button>
+            <button id="k" class="tecla">k</button>
+            <button id="l" class="tecla">l</button>
         </div>
         <div class="linha">
             <button id="adivinhar" class="tecla-grande">Adivinhar</button>
-            <button class="tecla">z</button>
-            <button class="tecla">x</button>
-            <button class="tecla">c</button>
-            <button class="tecla">v</button>
-            <button class="tecla">b</button>
-            <button class="tecla">n</button>
-            <button class="tecla">m</button>
+            <button id="z" class="tecla">z</button>
+            <button id="x" class="tecla">x</button>
+            <button id="c" class="tecla">c</button>
+            <button id="v" class="tecla">v</button>
+            <button id="b" class="tecla">b</button>
+            <button id="n" class="tecla">n</button>
+            <button id="m" class="tecla">m</button>
             <button id="apagar" class="tecla-grande">Apagar</button>
         </div>
     </section>

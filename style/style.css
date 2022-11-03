@@ -15,6 +15,10 @@ body {
 }
 
 #boasvindas {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 5% 10%;
     margin: auto;
 }
@@ -30,6 +34,11 @@ body {
     margin-left: 20px;
 }
 
+.exemplo {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
 .jogador {
     display: flex;
     align-items: center;
@@ -40,15 +49,16 @@ body {
 
 #btnJogar {
     padding: 10px;
+    margin-top: 5%;
     border-radius: 5px;
     border: 1;
-    width: 50%;
+    width: 60%;
     background-color: white;
     color: rgb(53, 53, 53);
+
 }
 
 #secreta {
-    border: 2px solid black;
     margin: 0 auto;
     text-align: center;
     color: brown;
@@ -70,6 +80,7 @@ body {
 .palpite {
     display: flex;
     margin: 2px;
+    justify-items: center;
     width: 50vw;
     justify-content: center;
 

@@ -5,7 +5,6 @@ const wordle = new Wordle();
 
 //capturar todos os itens necessários
 const boasVindas = document.getElementById('boasvindas');
-const jogador = document.getElementById('inputName');
 const btnJogar = document.getElementById('btnJogar');
 const board = document.getElementById('board');
 const secreta = document.getElementById('secreta');
@@ -28,20 +27,14 @@ btnJogar.addEventListener("click", () => {
     //mostrando o board e o teclado
     board.classList.remove("hidden");
     teclado.classList.remove("hidden");
-  
-    //colocando o nome do jogador na classe wordle
-    //wordle.jogador = jogador.value; 
-    //colocando o nome do jogador no html
-    //nomeJogador.innerText = wordle.jogador; 
-  
   });
 
 
 //transform: scale(1.1)
 //transform: rotate(90deg)
 
-
-//colocando event listener no botão adivinhar
+//--------------------------------------------------
+//apertou o botao ADIVINHAR --> colocando event listener no botão adivinhar
 const btnAdivinhar = document.querySelector('#adivinhar');
 btnAdivinhar.onclick = () => {
     
@@ -51,6 +44,7 @@ btnAdivinhar.onclick = () => {
         let cor = "";
         let tile = "";
         let palavra = wordle.letters.join("");
+        apertouAdivinhar = true;
 
         //se palavra nao existe no dicionario
         if (!wordle.palavraValida(palavra)){
@@ -58,53 +52,73 @@ btnAdivinhar.onclick = () => {
             divResultado.classList.remove("hidden");
             apertouAdivinhar = false;
             return;
-
         } 
         //se a palavra existe, checar as letras
         else {
             //chamar checar palavra
             wordle.letters.forEach((letra, indice) => {
-                //console.log("dentro btnAdivinhar",letra, indice);
                 cor = wordle.checarPalpite(letra, indice);
                 tile = document.getElementById(wordle.getPosicao(indice + 1));
                 
-                //mudando a cor do div do dom
+                //mudar a cor do div dos palpites
                 tile.classList.add(cor);
+
+                //mudar a cor do teclado para letras ja digitadas
+
+
             });   
-            //se ganhou:
-            if (wordle.letters === wordle.palavraSecreta) {
+
+            //se ganhou
+            if (palavra === wordle.palavraSecreta) {
+                wordle.ganhou = true;
                 divResultado.innerText = "Você ganhou!";
                 divResultado.classList.remove("hidden");
+
+                //mostrar botao para jogar de novo
+
+                return;
             } 
+            //se ainda não ganhou
+            if (wordle.rodadaAtual < 60) {
+                //limpar letters
+                wordle.letters = [];
+                //mudar rodada
+                wordle.rodadaAtual += 10;
+                apertouAdivinhar = false;
+            }
+            //se não tem mais rodadas disponíveis
+            else {
+                //
+                divResultado.innerText = "Você perdeu!";
+                divResultado.classList.remove("hidden");
+                secreta.classList.remove("hidden");
+
+                //mostrar botao para jogar de novo
+
+
+            }
             
         }
-        
-        
-        //mudar a rodada
-        //wordle.rodadaAtual++;
-        //wordle.letters = [];
-        apertouAdivinhar = true;
     }
 }
 
+//--------------------------------------------------
+//apertou o botao APAGAR
 const btnApagar = document.querySelector('#apagar');
 btnApagar.onclick = () => {
 
     //console.log("letters.length", wordle.letters.length);
-    //console.log(apertouAdivinhar);
+    console.log(apertouAdivinhar);
 
     if ((wordle.letters.length <= 5) && 
         (wordle.letters.length > 0) &&
         (!apertouAdivinhar)) {
-        //console.log("btnApagar rodada", wordle.rodadaAtual);
-        //console.log("btnApagar letters.length", wordle.letters.length);
-
+            
+        divResultado.innerText = "";
         divPosicao = document.getElementById(wordle.getPosicao(wordle.letters.length));
-        //console.log("apagar posicao", divPosicao);
 
         //apagando a ultima letra
         wordle.letters.pop(); 
-        //console.log("apagar letters.length", wordle.letters.length);
 
         //apagando a letra no html
         divPosicao.innerText = "";
@@ -118,6 +132,8 @@ const letras = document.querySelectorAll('.tecla');
 letras.forEach( (letra) => {
     letra.onclick = () => {
 
+        if (wordle.ganhou) return;
+
         if (wordle.letters.length === 5) {
             return;
         }
@@ -127,27 +143,17 @@ letras.forEach( (letra) => {
             //console.log("rodada", wordle.rodadaAtual);
 
             //obtendo a próxima posição
-            //console.log("add posicao antes", divPosicao);
             divPosicao = document.getElementById(wordle.getPosicao(wordle.letters.length) + 1);
-            //console.log("add posicao depois", divPosicao);
 
             //adicionando letra no array 
             wordle.letters.push(letra.innerText);
-            //console.log("add", wordle.letters);
             
-            //console.log(divPosicao);
             //preencher o html
             divPosicao.innerText = letra.innerText;
 
-            
-            
 
-        } else {
-            //o jogo terminou
-        }
-        
-        
-        
+        }    
+
 
     }
 });
