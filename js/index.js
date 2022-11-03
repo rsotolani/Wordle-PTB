@@ -18,6 +18,7 @@ let apertouAdivinhar = false;
 
 //sorteando a palavra secreta
 secreta.innerText = wordle.sortearPalavraSecreta();
+//secreta.innerText = "ALUDA";
 
 //adicionar o event listener no btnStart
 btnJogar.addEventListener("click", () => {
@@ -107,8 +108,7 @@ btnAdivinhar.onclick = () => {
 const btnApagar = document.querySelector('#apagar');
 btnApagar.onclick = () => {
 
-    //console.log("letters.length", wordle.letters.length);
-    console.log(apertouAdivinhar);
+    console.log("letters", wordle.letters);
 
     if ((wordle.letters.length <= 5) && 
         (wordle.letters.length > 0) &&

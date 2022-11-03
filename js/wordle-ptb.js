@@ -14,7 +14,7 @@ class Wordle {
 
     //método para sortear a palavra secreta
     sortearPalavraSecreta() {
-        return this.palavraSecreta = WORD[Math.floor(Math.random() * WORD.length)].toLowerCase();
+        return this.palavraSecreta = WORD[Math.floor(Math.random() * WORD.length)].toUpperCase();
     }
 
     
