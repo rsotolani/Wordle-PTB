@@ -4,8 +4,8 @@ class Wordle {
 
     constructor() {
         this.jogador = "";
-        this.rodadas = 6;
-        this.rodadaAtual = 1;
+        this.rodadas = 60;
+        this.rodadaAtual = 10;
         this.palavraSecreta = "";
         this.palpites = ["", "", "", "", "", ""];
         this.letters = [];
@@ -18,7 +18,7 @@ class Wordle {
         //     [6, ""]
         // ]
         
-        this.posicao = 11;
+        this.posicao = 10;
         this.ganhou = false;
     }
 
@@ -42,18 +42,19 @@ class Wordle {
         return false;
     }
 
-    proximaPosicao(atual) {
-        console.log("atual",atual, typeof(atual));
-        
-        //se passou a ultima rodada
-        //if (atual > 65) return -1;
-
-        //ultima letra -> proxima rodada
-        //if (atual % 5 === 0) return this.posicao = atual + 6;
-
-        //mesma rodada -> proxima letra
-        return this.posicao = atual + 1;
+    getPosicao(lettersLength) {
+        return wordle.rodadaAtual + lettersLength;
     }
+    
+    setPosicao(pos) {
+        return wordle.posicao = pos;
+    }
+
+    palavraValida(palavra) {
+        return WORD.includes(palavra);
+    }
+
+    
 
     //método para renderizar o board
     renderPalpites() {
@@ -61,15 +62,23 @@ class Wordle {
     }
 
     //método para checar a palavra-tentativa (botao enter)
-    checarTentativa(palavraTentativa) {
+    checarPalpite(letra, indice) {
+        //console.log("dentro de checarPalpite", letra, indice);
         //se a letra não está inclusa -> cinza (usar includes)
+        if (!this.palavraSecreta.includes(letra)) {
+            return "gray";
+        }
 
-        //para cada letra, iterando
-        //se a letra esta inclusa na palavra E na posicao correta -> verde (ver o indexof())
-
-        //se a letra esta incluida na palavra -> amarelo
-
-
+        if (this.palavraSecreta.includes(letra)) {
+            //se a letra esta inclusa na palavra E na posicao correta -> verde (ver o indexof())
+            if (this.palavraSecreta[indice] === letra) {
+                return "green";
+            } 
+            //se a letra esta incluida na palavra -> amarelo
+            else {
+                return "yellow";
+            }
+        }
         
     }
 
