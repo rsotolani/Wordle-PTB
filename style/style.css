@@ -53,7 +53,7 @@ body {
     border-radius: 5px;
     border: 1;
     width: 60%;
-    background-color: white;
+    background-color: #8EC3B0;
     color: rgb(53, 53, 53);
 }
 
@@ -104,7 +104,7 @@ body {
 
 .letra {
     display: flex;
-    border: 2px solid gray;
+    border: 2px solid #AEBDCA;
     margin: 0 3px;
     border-radius: 10%;
     width: 40px;
@@ -114,18 +114,18 @@ body {
 }
 
 div.green {
-    background-color: green;
-    border-color: green;
+    background-color: #8EC3B0;
+    border-color: #8EC3B0;
 }
 
 div.yellow {
-    background-color: yellow;
-    border-color: yellow;
+    background-color: #FFD372;
+    border-color: #FFD372;
 }
 
 div.gray {
-    background-color: grey;
-    border-color: grey;
+    background-color: #AEBDCA;
+    border-color: #AEBDCA;
 }
 
 #teclado {
@@ -145,7 +145,8 @@ div.gray {
 }
 
 .tecla {
-    border: 2px solid gray;
+    border: 2px solid #AEBDCA;
+    background-color: #AEBDCA;
     margin: 2px 1px;
     border-radius: 10%;
     width: 30px;
@@ -153,11 +154,12 @@ div.gray {
 }
 
 .tecla-grande {
-    border: 2px solid gray;
-    margin: 3px 1px;
+    border: 2px solid #AEBDCA;
+    background-color: #AEBDCA;
+    margin: 2px 1px;
     border-radius: 10%;
-    width: 80px;
-    height: 50px;
+    width: 70px;
+    height: 40px;
 }
 
 #btnReset {
@@ -166,7 +168,7 @@ div.gray {
     border-radius: 5px;
     border: 1;
     width: 60%;
-    background-color: white;
+    background-color: #8EC3B0;
     color: rgb(53, 53, 53);
 }
 
