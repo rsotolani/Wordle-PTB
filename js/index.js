@@ -14,6 +14,7 @@ const nomeJogador = document.getElementById('nome-jogador');
 const divResultado = document.getElementById('resultado');
 
 let divPosicao = document.getElementById('11'); //primeira posicao
+let btnTecla = "";
 let apertouAdivinhar = false;
 
 
@@ -109,7 +110,7 @@ btnAdivinhar.onclick = () => {
 const btnApagar = document.querySelector('#apagar');
 btnApagar.onclick = () => {
 
-    console.log("letters", wordle.letters);
+    //console.log("letters", wordle.letters);
 
     if ((wordle.letters.length <= 5) && 
         (wordle.letters.length > 0) &&
@@ -118,11 +119,14 @@ btnApagar.onclick = () => {
         aviso.innerText = "";
         divPosicao = document.getElementById(wordle.getPosicao(wordle.letters.length));
 
-        //apagando a ultima letra
-        wordle.letters.pop(); 
+        //obtendo a tecla a ser apagada e apagando da array letters
+        btnTecla = document.getElementById(wordle.letters.pop());
 
         //apagando a letra no html
         divPosicao.innerText = "";
+
+        //mudar a cor da tecla
+        btnTecla.classList.remove('dark');
     }
 }
 
@@ -152,6 +156,9 @@ letras.forEach( (letra) => {
             //preencher o html
             divPosicao.innerText = letra.innerText;
 
+            //mudar a cor da tecla
+            btnTecla = letra;
+            btnTecla.classList.add('dark');
 
         }    
 
@@ -166,6 +173,7 @@ btnReset.addEventListener("click", () => {
     secreta.innerText = wordle.sortearPalavraSecreta();
     //palpites.removeChilds;
     palpites.innerHTML = "";
+    apertouAdivinhar = false;
     wordle.initBoard(palpites);
     btnReset.classList.add("hidden");
     aviso.classList.add("hidden");

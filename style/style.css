@@ -5,13 +5,13 @@
 }
 
 body {
-    width: 70vw;
+    width: 90vw;
     margin: auto;
 }
 
 #header {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #boasvindas {
@@ -82,7 +82,7 @@ body {
 }
 
 #board {
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 
@@ -97,7 +97,7 @@ body {
     display: flex;
     margin: 2px;
     justify-items: center;
-    width: 50vw;
+    width: 90vw;
     justify-content: center;
 
 }
@@ -113,20 +113,22 @@ body {
     justify-content: center;
 }
 
-div.green {
+.green {
     background-color: #8EC3B0;
     border-color: #8EC3B0;
 }
 
-div.yellow {
+.yellow {
     background-color: #FFD372;
     border-color: #FFD372;
 }
 
-div.gray {
+.gray {
     background-color: #AEBDCA;
     border-color: #AEBDCA;
 }
+
+
 
 #teclado {
     margin: auto;
@@ -134,13 +136,16 @@ div.gray {
     justify-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90vw;
+
 }
 
 .linha {
     display: flex;
     margin: 2px;
-    width: 50vw;
+    width: 90vw;
     justify-content: center;
+
 
 }
 
@@ -160,6 +165,11 @@ div.gray {
     border-radius: 10%;
     width: 70px;
     height: 40px;
+}
+
+.dark {
+    background-color: #9c9fa0;
+    border-color: #9c9fa0;
 }
 
 #btnReset {
