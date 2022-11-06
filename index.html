@@ -10,47 +10,45 @@
 <body>
     <!-- Tela de boas vindas do jogo -->
     <header id="header">
-        <h1>Wordle em Português</h1>
+        <h1>Uôrdle</h1>
     </header>
 
     <section id="boasvindas" class="boasvindas">
         <!-- tela inicial do jogo -->
-        <p class="como-jogar">Como Jogar</p>
-        <ul class="dicas">
-            <li>Adivinhe a palavra secreta em até 6 tentativas.</li>
-            <li>Cada palpite deve ser uma palavra válida de 5 letras.</li>
-            <li>As palavras são em português e sem acento.</li>
-            <li>A cor dos azulejos mudará para mostrar o quão perto seu palpite está da palavra secreta.</li>
-        </ul>
-        <p class="como-jogar">Exemplos</p>
-        <div class="palpite">
-            <div class="letra green">C</div>
-            <div class="letra gray">A</div>
-            <div class="letra gray">U</div>
-            <div class="letra gray">S</div>
-            <div class="letra gray">A</div>
+        <div id="orientacao">
+            <p class="como-jogar">Como Jogar</p>
+                <p>1 palavra secreta. 5 letras. 6 tentativas.</p>
+                <p>Palavras em português e sem acento. A cada palpite, dicas:</p>
+            </ul>
         </div>
-        <p class="exemplo">C está na palavra e no lugar correto.</p>
-        <div class="palpite">
-            <div class="letra gray">P</div>
-            <div class="letra gray">O</div>
-            <div class="letra yellow">N</div>
-            <div class="letra gray">T</div>
-            <div class="letra gray">A</div>
+        <div id="examples">
+            <p class="como-jogar">Exemplos</p>
+            <div class="palpite">
+                <div class="letra green">C</div>
+                <div class="letra gray">A</div>
+                <div class="letra gray">U</div>
+                <div class="letra gray">S</div>
+                <div class="letra gray">A</div>
+            </div>
+            <p class="exemplo">C está na palavra e no lugar correto.</p>
+            <div class="palpite">
+                <div class="letra gray">P</div>
+                <div class="letra gray">O</div>
+                <div class="letra yellow">N</div>
+                <div class="letra gray">T</div>
+                <div class="letra gray">A</div>
+            </div>
+            <p class="exemplo">N está na palavra, mas no lugar errado.</p>
+            <div class="palpite">
+                <div class="letra gray">A</div>
+                <div class="letra gray">N</div>
+                <div class="letra gray">O</div>
+                <div class="letra gray">E</div>
+                <div class="letra gray">S</div>
+            </div>
+            <p class="exemplo">Nenhuma letra está na palavra em nenhum lugar.</p>
+            <button id="btnJogar">Jogar!</button>
         </div>
-        <p class="exemplo">N está na palavra, mas no lugar errado.</p>
-        <div class="palpite">
-            <div class="letra gray">A</div>
-            <div class="letra gray">N</div>
-            <div class="letra gray">O</div>
-            <div class="letra gray">E</div>
-            <div class="letra gray">S</div>
-        </div>
-        <p class="exemplo">Nenhuma letra está na palavra em nenhum lugar.</p>
-
-        <button id="btnJogar">Jogar!</button>
-
-
     </section>
 
 
